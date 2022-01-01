@@ -4,8 +4,7 @@ const game_div = document.getElementById('game');
 const game_container_div = document.getElementById('game-container');
 const reset_Button = document.getElementById('reset');
 const color_Button = document.getElementById('colorChange');
-
-let userRange_input = document.getElementById('userRange')
+let userRange_input = document.getElementById('userRange');
 
 //               Game Logic
 
@@ -35,6 +34,9 @@ function randomColor() {
   return "rgb("+ x + "," + y + "," + z +")"
 }
 
+
+
+
 // Div Creator
 function divCreator(userInput) {
   clearOut()
@@ -45,12 +47,24 @@ function divCreator(userInput) {
 
   for (i=0; i<gridArea; i++) {
     const gridItem = document.createElement('div');
+    
+    color_Button.addEventListener('change', () => {
+      if (color_Button.checked) {
+        gridItem.addEventListener('mouseover', () => {
+          gridItem.style.background = randomColor();
+        })
+      } else {
+        gridItem.addEventListener('mouseover', () => {
+          gridItem.style.background = 'black'
+        })
+      }
+    })
     gridItem.addEventListener('mouseover', () => {
-      gridItem.classList.add("game-item-hidden")
+      gridItem.style.background = 'black'
     })
 
     reset_Button.addEventListener('click', () => {
-      gridItem.classList.remove("game-item-hidden")
+      gridItem.style.background = 'lightgray'
     })
 
 
@@ -74,6 +88,8 @@ function main() {
     divCreator(document.getElementById('userRange').value);
   })
   
+  console.log(color_Button.value)
+  randomColor();
 };
 
 main();
