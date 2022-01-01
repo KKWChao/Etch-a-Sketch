@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etch-A-Sketch</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+        <!--              Tasks:                    -->
+        <!-- 1. create etch a sketch game           -->
+        <!-- 2. add clickable nav bar with dropdown -->
+        <!-- 3. add links                           -->
+        <!-- 4. prettify                            -->
+        <!-- 5. add functionality for more divs     -->
+        <!-- 6. cleanup code                        -->
+        
+
+
+
+
+  <!-- Nav Bar -->
+
+  <div id="nav-bar">
+    <div class="nav-bar-item">LOGO</div>
+    <div class="nav-bar-item" id="nav-menu">
+      <div class="nav-menu-burger">
+        <div class="dropdown-content">
+          <a href="">a</a>
+          <a href="">a</a>
+          <a href="">a</a>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  <!-- Main Body of Game -->
+  <div class="main">
+    <div id="sizeContainer">
+      <span>Enter a Number:</span>
+      <input id="userRange" type="number" min="16" max="100" value="16">
+    </div>
+
+    <div id="colorContainer">
+      <span>Random Color:</span>
+      <input id="colorChange" type="checkbox">
+    </div>
+
+    <div id="game-banner">
+
+      <button id="reset" onclick="">Reset</button>
+    </div>
+    <div id="game">
+      <div id="game-container">
+      </div>  
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p id="disclaimer">Disclaimer</p>
+    <a href="">link</a>
+  </footer>
+
+  <script src="./scripts/main.js" charset="utf-8"></script>
+</body>
+</html>

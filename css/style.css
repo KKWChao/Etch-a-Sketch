@@ -1,0 +1,176 @@
+/*      Main Style Sheet      */
+/*      Main Style Sheet      */
+/*      Main Style Sheet      */
+/*      Main Style Sheet      */
+/*      Main Style Sheet      */
+
+/* General Items for Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.nav-bar-item {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+#reset,
+#colorChange {
+  padding: 2px 5px;
+  box-shadow: 0 0 2px black;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+/*        Nav Bar        */
+
+
+#nav-menu {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border: 2px black solid;
+  width: 20px;
+  height: 20px;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+
+}
+
+/*        Menu Burger      */
+
+.nav-menu-burger {
+  width: 10px;
+  height: 2px;
+  background: black;
+  border-radius: 1em;
+  transition: all .5s ease-in-out;
+}
+
+.nav-menu-burger::before,
+.nav-menu-burger::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: black;
+  border-radius: 1em;
+  transition: all .5s ease-in-out;
+}
+
+.nav-menu-burger::before {
+  transform: translateY(-4px);
+}
+.nav-menu-burger::after {
+  transform: translateY(4px);
+}
+
+#nav-menu:hover {
+  background: black;
+}
+
+#nav-menu:hover .nav-menu-burger, 
+#nav-menu:hover .nav-menu-burger::before,
+#nav-menu:hover .nav-menu-burger::after {
+  background: white;
+}
+
+/*        Dropdown Content    */
+
+.dropdown-content {
+  position: absolute;
+  min-width: 100px;
+  display: none;
+}
+
+
+.dropdown-content:hover {
+  display: block;
+}
+
+
+/*        Body Items           */
+
+.main {
+  display: flex;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+}
+
+#nav-bar,
+footer {
+  display: flex;
+  flex-shrink: 0;
+  background-color: darkgray;
+  padding: 10px;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+/* reset button */
+
+#game-banner {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  gap: 5px;
+}
+
+#reset:active {
+  background-color: darkgray;
+}
+
+
+/*        ID styling           */
+
+#sizeContainer,
+#colorContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+/*        Game Stuff           */
+
+
+
+
+.game-item-hidden {
+  background: black;
+}
+
+#game {
+  display: flex;
+  justify-content: center;
+}
+
+#game-container {
+  display: grid;
+  margin: 50px;
+  justify-content: center;
+  align-self: center;
+  height: 800px;
+  width: 800px;
+}
+
+#game-container div {
+  height: 1fr;
+  width: 1fr;
+  border: 0.5px solid black;
+}
+
