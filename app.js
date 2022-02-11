@@ -47,18 +47,20 @@ function divCreator(userInput) {
 
   for (i=0; i<gridArea; i++) {
     const gridItem = document.createElement('div');
-    
     color_Button.addEventListener('change', () => {
+      
       if (color_Button.checked) {
         gridItem.addEventListener('mouseover', () => {
           gridItem.style.background = randomColor();
         })
+
       } else {
         gridItem.addEventListener('mouseover', () => {
           gridItem.style.background = 'black'
         })
       }
     })
+
     gridItem.addEventListener('mouseover', () => {
       gridItem.style.background = 'black'
     })
@@ -66,7 +68,6 @@ function divCreator(userInput) {
     reset_Button.addEventListener('click', () => {
       gridItem.style.background = 'lightgray'
     })
-
 
     game_container_div.append(gridItem);
   }
@@ -78,7 +79,7 @@ function divCreator(userInput) {
 
 function main() {
 
-  divCreator(1);
+  divCreator(10);
 
   userRange_input.addEventListener('change',()=>{
     divCreator(document.getElementById('userRange').value);
